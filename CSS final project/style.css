@@ -1,0 +1,605 @@
+* {
+    font-family: "Smooch Sans", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    
+    height: 100vh;
+    display: grid;
+    grid-template-columns:250px 3fr;
+    grid-template-areas:
+    
+    "sidebar main";
+    
+ 
+}
+
+.sidebar {
+    font-family: "Smooch Sans", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+    grid-area: sidebar;
+    color:white;
+    width: 250px;
+    height: 100vh;
+    background:
+         
+        linear-gradient(
+          rgba(0, 0, 0, 0.7), 
+          rgba(0, 0, 0, 0.7)
+        ),
+        
+        url(images/sidebar-1.jpg);
+    
+
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    position:relative;
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+.sidebar .titulli{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 60px;
+    width: 90%;
+    margin-left: 5%;
+    border-bottom: 1px grey solid;
+    
+    
+
+}
+.sidebar .profili{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    width: 90%;
+    margin-left: 5%;
+    border-bottom: 1px grey solid;
+}
+.sidebar .profilep{
+    border-radius: 100%;
+    margin-left: 8%;
+    width:35px;
+    height:35px;
+}
+.sidebar .menut{
+height: 100%;
+margin-left: 5%;
+margin-top: 10%;
+width:90%; 
+top: 0;
+left: 0;
+
+
+}
+.sidebar .menut .Dashboard{
+    display: flex;
+    background-color: red;
+    height:50px;
+    gap:10%;
+    align-items: center;
+    border-radius: 5px;
+    cursor:pointer;
+    
+} 
+.sidebar .menut .items img,.items1  img{
+    margin-left: 10%;
+}
+.sidebar .menut .items{
+    display: flex;
+    transition: .2s linear;
+    height:50px;
+    justify-content: space-between;
+    cursor:pointer;
+    align-items: center;
+    border-radius: 5px;
+    flex-wrap: wrap;
+    
+    
+} 
+.sidebar .menut .items1{
+    display: flex;
+    transition: .2s linear;
+    height:50px;
+    cursor:pointer;
+    gap:10%;
+    align-items: center;
+    border-radius: 5px;
+    
+} 
+.sidebar .menut .items .more{
+    
+    box-sizing: border-box; /* Kjo do të bëjë që marginat dhe padding të përfshihen në madhësinë totale */
+  margin-left: 60px;
+}
+.sidebar .menut .items .more{
+    
+}
+.sidebar .menut .Dashboard img{
+    margin-left: 10%;
+}
+.sidebar .menut .items:hover ,.items1:hover{
+    background-color: rgba(128, 128, 128, 0.333);
+}
+
+
+
+.main {
+    grid-area: main;
+    background-color: rgba(128, 128, 128, 0.146);
+    overflow-y: auto;
+    z-index: 111111;
+   
+}
+.main .header{
+    display: flex;
+    margin-top: 2%;
+    align-items: center;
+    
+    
+}
+.main .header .menuja1{
+    height:40px;
+    cursor:pointer;
+    background-color: white;
+    width:40px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 100%;
+    transition: .3s linear;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main .header .menuja1:hover{
+    box-shadow: 10px 5px 15px rgba(0, 0, 0, 0.2);
+}
+ .tooltip-text {
+    height:20px;
+    width:60px;
+    background-color: black;
+    color:white;
+    position: absolute;
+    margin-top: 70px;
+    margin-left: 30px;
+    visibility: hidden;
+    transition: .1s linear ;
+    border-radius: 2px;
+    
+    
+  }
+
+ .menuja1:hover  .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+  }
+  .dash1 , .pro{
+    height:20px;
+    width:60px;
+    background-color: black;
+    color:white;
+    position: absolute;
+    margin-top: 5px;
+    margin-left: -50px;
+    visibility: hidden;
+    transition: .1s linear ;
+    border-radius: 2px;
+  }
+  .icons11:hover  .dash1 {
+    visibility: visible;
+    opacity: 1;
+  }
+  .icons33:hover  .pro {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+
+.logo{
+    display: flex;
+    align-items: center;
+    margin-left: 5%;
+    justify-content: space-between;
+    width:13%;
+}
+.searchbar{
+display: flex;
+align-items: center;
+justify-content: space-between;
+
+margin-left: 45%;
+width:23%;
+    
+}
+.searchbar input{
+    border:none;
+    height:30px;
+    background-color: transparent;
+    border-bottom:2px solid rgba(128, 128, 128, 0.555);
+    
+}
+.searchbar input::placeholder{
+
+}
+.searchbar input:focus{
+    border-bottom:2px solid rgb(81, 8, 81);
+    outline:none;
+}
+.mtjera{
+    margin-left: 3%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  
+    width: 10%;
+}
+.mtjera img{
+ cursor:pointer;
+}
+
+  .dropdown{
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.3);
+    width:180px;
+    z-index: 111;
+    background-color: white;
+    position: absolute;
+    height:200px;
+    margin-left: -170px;
+    visibility: hidden;
+  }
+  .icons12:hover .dropdown{
+    visibility: visible;
+    opacity:1;
+  }
+   .dropdown:hover{
+    visibility: visible;
+    opacity:1;
+  }
+  .dropmenu{
+    height:40px;
+    font-size: 15px;
+    cursor:pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .dropmenu:hover{
+    background-color: red;
+  }
+  .not{
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:15px;
+    height:15px;
+    font-size: 8px;
+    position:absolute;
+    margin-top: -30px;
+    margin-left: 10px;
+    color:white;
+    border-radius: 100%;
+  }
+  .main .shitjet{
+    border-radius: 5px;
+    background-color: white;
+    width:94%;
+    margin-left: 5%;
+    margin-top: 7%;
+    height:250px;
+  }
+  .logosh{
+    width:75px;
+    height:75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background-color: rgb(9, 218, 9);
+    box-shadow: 0px 4px 12px rgb(9, 218, 9);
+    margin-left: 2%;
+    margin-top: -3%;
+  }
+  .headersh{
+    display: flex;
+    font-size: 20px;
+    gap:2%;
+    align-items: center;
+    
+  }
+  .stats
+  {
+   
+    width:35%;
+    height:183px;
+
+
+  }
+  .shtetet{
+    border-bottom:1px solid rgba(128, 128, 128, 0.42);
+    width:80%;
+    margin-left: 10%;
+    height:45.7px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .baza1{
+    display: flex;
+    height:183px;
+    margin-top: 2%;
+  }
+  .flam{
+    height:100%;
+    width:35%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:5%;
+
+
+  }
+  .flam img{
+    width:15px;
+    height:15px;
+  }
+  .stat1{
+   
+    display: flex;
+    justify-content: space-between;
+    width:35%;
+    align-items: center;
+  }
+  .locat iframe{
+    width:100%;
+    height:100%;
+  }
+  
+  .locat{
+    
+    width:80%;
+    
+  }
+  .tdhanat{
+  border-radius: 5px;
+  width:94%;
+  margin-left: 5%;
+  margin-top: 7%;
+  height:150px;
+  display: flex;
+  justify-content: space-between;
+  }
+  #karta{
+    background-color: white;
+    width:47%;
+    height:150px;
+    border-radius: 5px;
+ 
+  }
+  .logok{
+    width:75px;
+    height:75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    margin-left: 5%;
+    margin-top: -3%;
+  }
+  .kujdes{
+    border-top: 1px solid rgba(128, 128, 128, 0.502);
+   width:90%;
+   margin-left: 5%;
+    margin-top: 25px;
+    height:50px;
+    color:rgba(128, 128, 128, 0.612);
+    display: flex;
+    align-items: center;
+    gap:2%;
+  }
+  .kujdes img{
+    width:15px;
+    height:15px;
+    
+  }
+  .textbox{
+    
+    width:50px;
+    height:50px;
+    margin-left:80%;
+    margin-top: -12%;
+    
+
+  }
+  .textbox p{
+    color:rgba(128, 128, 128, 0.548);
+  }
+  .textbox h3{
+    font-size: 25px;
+    font-weight: 100;
+  }
+  .mlist{
+    margin-top: 15%;
+  
+  }
+  .mlist p{
+    margin-left: 5%;
+    font-size: 25px;
+  }
+  .ndarje3{
+    border-radius: 5px;
+    width:94%;
+    margin-left: 5%;
+    margin-top: 3%;
+    height:350px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .ndarje{
+    width:28%;
+    background-color: white;
+    border-radius: 5px;
+  }
+  .nfoto{
+   
+    width:90%;
+    margin-left: 5%;
+    height:170px;
+    margin-top:-5% ;
+  }
+  .nfoto img{
+    width:100%;
+    margin-top:10% ;
+    transition: .3s linear;
+    border-radius: 5px;
+    height:140px;
+  }
+  .nfoto:hover .nalt{
+    transform:translateY(-25px);
+  }
+  .nfoto .nalt{
+    z-index: 1;
+  }
+.edits{
+    display: flex;
+    align-items: center;
+    width:50%;
+    height:25px;
+    margin-top:-30px;
+    margin-left: 25%;
+    visibility: hidden;
+    justify-content: space-between;
+}
+.nfoto:hover .edits{
+    visibility: visible;
+}
+.edits img{
+    width:20px;
+    cursor: pointer;
+    height:20px;
+
+}
+.titullind{
+   
+    text-align: center;
+    font-weight: 10;
+}
+.tekstind{
+    margin-top: 10%;
+    width:90%;
+    margin-left: 5%;
+    height:100px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.516);
+    color:rgba(128, 128, 128, 0.516);
+}
+.qmimi{
+    height:50px;
+    display: flex;
+    width: 90%;
+    margin-left: 5%;
+    justify-content: space-between;
+
+}
+.qmimi1{
+    
+    width:30%;
+    height:100%;
+    display: flex;
+    align-items: center;
+}
+.loka{
+    display: flex;
+    align-items: center;
+}
+.footer{
+    border-top: 1px solid rgba(128, 128, 128, 0.434);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width:90%;
+    margin-left: 5%;
+    height:70px;
+    margin-top: 10%;
+
+}
+.footer .reklama{
+    display: flex;
+    align-items: center;
+    gap:10%;
+}
+
+
+
+@media (max-width: 768px) {
+    body{
+        grid-template-columns:0px 3fr;
+    grid-template-areas:
+    
+    "sidebar main";
+    }
+    .sidebar{
+        opacity:0;
+    }
+    .main{
+        width:100%;
+    }
+    .menuja1{
+        opacity: 0;
+    }
+    .mtjera {
+        opacity:0;
+    }
+    input{
+        opacity:0;
+    }
+}
+@media (max-width: 450px){
+    .baza1{
+        display: block;
+    }
+    .tdhanat{
+        margin-top: 50%;
+        display: block;
+        gap:10%;
+    }
+    #karta{
+        width:100%;
+        margin-top: 10%;
+    }
+    .locat{
+        
+        width:100%;
+    }
+    .ndarje3{
+        margin-top: 50%;
+        display: block;
+    }
+    .ndarje{
+        width:100%;
+        margin-top: 15%;
+    
+    }
+    .mlist{
+        margin-top: 50%;
+    }
+    .footer{
+        margin-top: 230%;
+    }
+    
+}
